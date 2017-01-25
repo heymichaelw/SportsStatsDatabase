@@ -50,6 +50,7 @@ namespace SportsStatsDatabase.Migrations
             context.Teams.Add(cornhuskers);
             context.Teams.Add(buckeyes);
             context.Teams.Add(badgers);
+            context.Teams.Add(sooners);
          
             }
             //  This method will be called after migrating to the latest version.
