@@ -15,12 +15,11 @@ namespace SportsStatsDatabase.Migrations
         protected override void Seed(SportsStatsDatabase.SportsStatsContext context)
         {
 
-            {
                 Team cornhuskers = new Team
                 {
                     TeamId = 1,
                     City = "Lincoln, Nebraska",
-                    Founding = DateTime.Now,
+                    Founding = new DateTime(1890, 1, 5),
                     Wins = 854
                 };
 
@@ -28,7 +27,7 @@ namespace SportsStatsDatabase.Migrations
                 {
                     TeamId = 2,
                     City = "Columbus, Ohio",
-                    Founding = DateTime.Now,
+                    Founding = new DateTime(1890, 3, 18),
                     Wins = 778
                 };
 
@@ -36,15 +35,22 @@ namespace SportsStatsDatabase.Migrations
                 {
                     TeamId = 3,
                     City = "Madison, Wisconsin",
-                    Founding = DateTime.Now,
+                    Founding = new DateTime(1889, 2, 10),
                     Wins = 679
                 };
 
                 Team sooners = new Team
                 {
                     TeamId = 4,
-                    City = "Norman, Oklahoma"
-                }
+                    City = "Norman, Oklahoma",
+                    Founding = new DateTime(1895, 4, 20),
+                    Wins = 872
+                };
+
+            context.Teams.Add(cornhuskers);
+            context.Teams.Add(buckeyes);
+            context.Teams.Add(badgers);
+            context.Teams.Add(sooners);
             }
             //  This method will be called after migrating to the latest version.
 
